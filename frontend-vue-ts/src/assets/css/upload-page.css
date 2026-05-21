@@ -1,0 +1,142 @@
+/* ===== CSS 变量 ===== */
+:root {
+  --primary-color: #4361ee;
+  --primary-dark: #3a56d4;
+  --primary-light: #93c5fd;
+  --secondary-color: #6c757d;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  --info-color: #0ea5e9;
+  --light-bg: #f8fafc;
+  --dark-bg: #1e293b;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --gradient-primary: linear-gradient(135deg, #4361ee, #3a0ca3);
+  --gradient-success: linear-gradient(135deg, #10b981, #059669);
+  --gradient-warning: linear-gradient(135deg, #f59e0b, #d97706);
+  --gradient-info: linear-gradient(135deg, #0ea5e9, #0284c7);
+}
+
+/* ===== 基础布局样式 ===== */
+.container-fluid {
+  max-width: 60%;
+  padding: 0 15px;
+}
+
+.py-4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.col-lg-8, .col-xl-6 {
+  padding: 0 15px;
+  width: 100%;
+}
+
+/* ===== 卡片辅助样式 ===== */
+.card {
+  margin-bottom: 2rem;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+/* ===== 帮助信息样式 ===== */
+.card:last-child .card-body {
+  padding: 1.5rem;
+}
+
+.card:last-child .card-title {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+}
+
+.card:last-child .card-title i {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+.card:last-child .list-unstyled {
+  margin: 0;
+}
+
+.card:last-child .list-unstyled li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.card:last-child .list-unstyled li:last-child {
+  border-bottom: none;
+}
+
+.card:last-child .list-unstyled li:hover {
+  background-color: rgba(248, 250, 252, 0.7);
+  padding-left: 0.5rem;
+  border-radius: 6px;
+}
+
+.card:last-child .list-unstyled i {
+  transition: var(--transition);
+  margin-right: 0.75rem;
+  font-size: 1rem;
+}
+
+.card:last-child .list-unstyled li:hover i {
+  transform: scale(1.2);
+}
+
+.card:last-child .list-unstyled .bi-check-circle {
+  color: var(--success-color);
+}
+
+/* ===== 辅助类 ===== */
+.small {
+  font-size: 0.875rem !important;
+}
+
+.text-success {
+  color: var(--success-color) !important;
+}
+
+.me-2 {
+  margin-right: 0.5rem !important;
+}

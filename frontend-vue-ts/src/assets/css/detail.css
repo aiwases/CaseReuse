@@ -1,0 +1,534 @@
+/* detail.css - 项目详情页面样式表 */
+
+/* ===== 全局样式 ===== */
+.container-lg {
+    max-width: 1200px;
+}
+
+/* ===== 顶部标题区域 ===== */
+.history-header {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 2rem;
+}
+
+.history-header h2 {
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 2.2rem;
+}
+
+.history-header .text-muted {
+    font-size: 0.95rem;
+}
+
+/* ===== 卡片通用样式 ===== */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-bottom: none;
+    padding: 1.2rem 1.5rem;
+}
+
+.card-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* ===== 项目信息卡片 ===== */
+.project-info-card .text-muted {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.project-info-card .row {
+    margin-top: 1rem;
+}
+
+.project-info-card strong {
+    color: #495057;
+    font-weight: 600;
+}
+
+/* ===== 文件操作卡片 ===== */
+.file-operations-card .btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    padding: 0.5rem 1rem;
+}
+
+.file-operations-card .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.file-operations-card .btn-outline-primary {
+    border: 2px solid #4e73df;
+    color: #4e73df;
+}
+
+.file-operations-card .btn-outline-primary:hover {
+    background-color: #4e73df;
+    color: white;
+}
+
+.file-operations-card .btn-outline-secondary {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+}
+
+.file-operations-card .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+.file-operations-card .btn-success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    border: none;
+}
+
+.file-operations-card .btn-info {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    border: none;
+}
+
+.file-operations-card h6.text-secondary {
+    color: #6c757d !important;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #dee2e6;
+}
+
+/* ===== 日志信息卡片 ===== */
+.log-info-card pre {
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #4e73df;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* ===== 项目进度卡片 ===== */
+.project-progress-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.project-steps {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.step.active .circle {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.line {
+    height: 4px;
+    background-color: #e9ecef;
+    margin: 0 1rem;
+    position: relative;
+    top: 25px;
+    transition: all 0.3s ease;
+}
+
+.line.active {
+    background: linear-gradient(90deg, #4e73df, #6f42c1);
+}
+
+.step .small {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.step.active .small {
+    color: #4e73df;
+    font-weight: 600;
+}
+
+#startProjectBtn {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(243, 156, 18, 0.3);
+    transition: all 0.3s ease;
+}
+
+#startProjectBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(243, 156, 18, 0.4);
+}
+
+/* ===== 模态框样式 ===== */
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.modal-header {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffebcc 100%);
+    color: #8c6d3c;
+    border-bottom: 1px solid rgba(255, 204, 128, 0.3);
+}
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.modal-footer {
+    border-top: 1px solid #e9ecef;
+    padding: 1rem 1.5rem;
+}
+
+/* 文件预览模态框特殊样式 */
+#filePreviewModal .modal-dialog {
+    max-width: 95%;
+    height: 85vh;
+}
+
+#filePreviewModal .modal-content {
+    height: 100%;
+}
+
+#filePreviewModal .modal-body {
+    padding: 0;
+    overflow: hidden;
+}
+
+#filePreviewBody {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+}
+
+/* ===== 徽章样式 ===== */
+.badge {
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+    border-radius: 6px;
+}
+
+.bg-success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60) !important;
+}
+
+.bg-info {
+    background: linear-gradient(135deg, #17a2b8, #138496) !important;
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, #4e73df, #224abe) !important;
+}
+
+.bg-danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+}
+
+.bg-warning {
+    background: linear-gradient(135deg, #f39c12, #e67e22) !important;
+}
+
+.bg-secondary {
+    background: linear-gradient(135deg, #6c757d, #495057) !important;
+}
+
+/* ===== 按钮样式 ===== */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4e73df, #224abe);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #224abe, #4e73df);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(78, 115, 223, 0.3);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border: none;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+.btn-outline-secondary {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* ===== 表格样式（用于Excel预览） ===== */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.table th {
+    background: linear-gradient(135deg, #4e73df, #224abe);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem;
+    border: none;
+}
+
+.table td {
+    padding: 0.75rem;
+    border: 1px solid #e9ecef;
+    background-color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.05);
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.table-sm th,
+.table-sm td {
+    padding: 0.5rem;
+}
+
+/* ===== 响应式设计 ===== */
+@media (max-width: 768px) {
+    .history-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .history-header > div:last-child {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .history-header .btn {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    .project-steps {
+        padding: 0 1rem;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .line {
+        top: 20px;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    #filePreviewModal .modal-dialog {
+        margin: 0.5rem;
+        width: calc(100% - 1rem);
+    }
+
+    .file-operations-card .btn {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-lg {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .history-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-steps {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .step {
+        flex-direction: row;
+        margin-bottom: 1rem;
+    }
+
+    .step .small {
+        margin-left: 0.5rem;
+        margin-top: 0;
+    }
+
+    .line {
+        display: none;
+    }
+}
+
+/* ===== 动画效果 ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* 延迟动画，使卡片依次出现 */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+/* ===== 加载状态 ===== */
+.text-center.text-muted.py-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+/* ===== 自定义滚动条 ===== */
+#filePreviewBody::-webkit-scrollbar {
+    width: 8px;
+}
+
+#filePreviewBody::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#filePreviewBody::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #4e73df, #224abe);
+    border-radius: 4px;
+}
+
+#filePreviewBody::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #224abe, #4e73df);
+}
+
+/* ===== 预览按钮样式 ===== */
+.preview-btn {
+    border: 2px solid #17a2b8;
+    color: #17a2b8;
+    font-weight: 500;
+}
+
+.preview-btn:hover {
+    background-color: #17a2b8;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(23, 162, 184, 0.3);
+}
+
+/* ===== 实用工具类 ===== */
+.text-gradient {
+    background: linear-gradient(135deg, #4e73df, #224abe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.rounded-lg {
+    border-radius: 12px !important;
+}
+
+/* ===== 图标增强 ===== */
+.bi {
+    transition: transform 0.2s ease;
+}
+
+.btn:hover .bi {
+    transform: scale(1.1);
+}
